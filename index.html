@@ -5,27 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>М.Г.Рукавишников</title>
     <style>
+        /* Общие стили */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
+
         .video-container {
-            max-width: 900px;
+            max-width: 100%;
             width: 100%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
+            box-sizing: border-box;
         }
+
         video {
             width: 100%;
+            height: auto;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .video-container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -33,11 +63,11 @@
 
     <div class="video-container">
         <h3>М.Г.Рукавишников</h3>
-        <video controls autoplay muted loop>
+        <video controls autoplay muted loop playsinline>
             <source src="test.mp4" type="video/mp4">
             Ваш браузер не поддерживает тег video.
         </video>
-        <p>Пример ожившего фото.</p>
+        <p>Пример ожившего фото</p>
     </div>
 
 </body>
